@@ -179,7 +179,7 @@ const App = () => {
       };
 
         // Second API call to get job cost
-        const jobCostUrl = `${corsProxy}https://api.stickermania818.com/jobcost?vinylType=${params.vinylType}&width=${params.width}&height=${params.height}&count=${params.count}&includeColor=${params.includeColor}&colorPercent=${params.colorPercent}&colorPasses=${params.colorPasses}&includeWhite=${params.includeWhite}&whitePercent=${params.whitePercent}&whitePasses=${params.whitePasses}&includeGloss=${params.includeGloss}&glossPercent=${params.glossPercent}&glossPasses=${params.glossPasses}&targetCostPerPrint=${params.targetCostPerPrint}&bSalesTax=${params.bSalesTax}&bSalesCommission=${params.bSalesCommission}`;
+        const jobCostUrl = `https://api.stickermania818.com/jobcost?vinylType=${params.vinylType}&width=${params.width}&height=${params.height}&count=${params.count}&includeColor=${params.includeColor}&colorPercent=${params.colorPercent}&colorPasses=${params.colorPasses}&includeWhite=${params.includeWhite}&whitePercent=${params.whitePercent}&whitePasses=${params.whitePasses}&includeGloss=${params.includeGloss}&glossPercent=${params.glossPercent}&glossPasses=${params.glossPasses}&targetCostPerPrint=${params.targetCostPerPrint}&bSalesTax=${params.bSalesTax}&bSalesCommission=${params.bSalesCommission}`;
         const jobCostResponse = await fetch(jobCostUrl, {headers});
         if (!jobCostResponse.ok) {
             throw new Error(`Error: ${jobCostResponse.statusText}`);
@@ -198,6 +198,7 @@ const App = () => {
   // 
 
   const calculate = () => {
+    console.log("hello")
     if (context) {
       console.log("Parent Context 2", context)
 
