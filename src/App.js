@@ -227,7 +227,7 @@ const App = () => {
           })
           console.log("Cols: ", cols)
           const apiParams = obtainInputParams(cols)
-          getJobCost(apiParams)
+          // getJobCost(apiParams)
           console.log("API Params: ", apiParams)
       }).catch((err) => {
           console.log("Error fetching columns: ", err);
