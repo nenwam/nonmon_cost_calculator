@@ -116,6 +116,7 @@ const App = () => {
   }, []);
 
   const obtainInputParams = (extractedParams) => {
+    console.log("Extracted Params: ", extractedParams)
     const dimensions = extractedParams.filter(param => param.label === 'text')[0].value
     const regex = /\d+/g;
     const dimAsNums = dimensions.match(regex).map(Number);
@@ -129,16 +130,16 @@ const App = () => {
     const includesGloss = printSettings.includes('GLOSS') ? true : false
     const includesColor = printSettings.includes('CMYK') ? true : false
 
-    const colorPercent = parseFloat(extractedParams.filter(param => param.label === 'numbers7')[0].value)
-    const colorPasses = parseInt(extractedParams.filter(param => param.label === 'numbers5')[0].value)
-    const whitePercent = parseFloat(extractedParams.filter(param => param.label === 'numbers1')[0].value)
-    const whitePasses = parseInt(extractedParams.filter(param => param.label === 'numbers14')[0].value)
-    const glossPercent = parseFloat(extractedParams.filter(param => param.label === 'numbers4')[0].value)
-    const glossPasses = parseInt(extractedParams.filter(param => param.label === 'numbers72')[0].value)
+    const colorPercent = parseFloat(extractedParams.filter(param => param.label === 'numbers8')[0].value)
+    const colorPasses = parseInt(extractedParams.filter(param => param.label === 'numbers7')[0].value)
+    const whitePercent = parseFloat(extractedParams.filter(param => param.label === 'numbers4')[0].value)
+    const whitePasses = parseInt(extractedParams.filter(param => param.label === 'numbers95')[0].value)
+    const glossPercent = parseFloat(extractedParams.filter(param => param.label === 'numbers82')[0].value)
+    const glossPasses = parseInt(extractedParams.filter(param => param.label === 'numbers6')[0].value)
 
-    const targetCost = parseFloat(extractedParams.filter(param => param.label === 'numbers2')[0].value)
-    const tax = extractedParams.filter(param => param.label === 'status_11')[0].value === 'Yes' ? true : false
-    const commission = extractedParams.filter(param => param.label === 'status_1')[0].value === 'Yes' ? true : false
+    const targetCost = parseFloat(extractedParams.filter(param => param.label === 'numbers87')[0].value)
+    const tax = extractedParams.filter(param => param.label === 'status_1')[0].value === 'Yes' ? true : false
+    const commission = extractedParams.filter(param => param.label === 'status_2')[0].value === 'Yes' ? true : false
 
     console.log("Print Settings: ", printSettings)
     // const includeColor = extractedParams.filter(param => param.label === 'dropdown0')[0].value
