@@ -228,7 +228,7 @@ const App = () => {
           })
           console.log("Cols: ", cols)
           const apiParams = obtainInputParams(cols)
-          // getJobCost(apiParams)
+          getJobCost(apiParams)
           console.log("API Params: ", apiParams)
       }).catch((err) => {
           console.log("Error fetching columns: ", err);
@@ -246,7 +246,7 @@ const App = () => {
     if (context) {
       const query = `
         mutation {
-          change_multiple_column_values(item_id: ${context.itemId}, board_id: ${context.boardId}, column_values: "{\\"numbers34\\": \\"${jobCost.costOfGoodsPerPrintJob}\\", \\"numbers3\\": \\"${jobCost.perPrintTotal}\\", \\"numbers38\\": \\"${jobCost.jobTotal}\\"}") {
+          change_multiple_column_values(item_id: ${context.itemId}, board_id: ${context.boardId}, column_values: "{\\"numbers1\\": \\"${jobCost.costOfGoodsPerPrintJob}\\", \\"numbers3\\": \\"${jobCost.perPrintTotal}\\", \\"numbers11\\": \\"${jobCost.jobTotal}\\"}") {
             id
             column_values {
               id
